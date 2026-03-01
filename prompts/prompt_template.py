@@ -2,6 +2,14 @@ from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
+'''
+why prompt template?
+Keeps prompts reusable
+Makes agents cleaner
+Avoids string mess
+Helps in complex pipelines
+Allows dynamic chaining
+'''
 load_dotenv()
 
 model = ChatOpenAI()
@@ -13,8 +21,9 @@ template2 = PromptTemplate(
 )
 
 # fill the values of the placeholders
-prompt = template2.invoke({'name':'nitish'})
+prompt = template2.invoke({'name':'nitish'}) 
 
+#sends to the model
 result = model.invoke(prompt)
 
 print(result.content)

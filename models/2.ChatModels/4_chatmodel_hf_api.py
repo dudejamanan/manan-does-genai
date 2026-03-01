@@ -1,3 +1,6 @@
+#huggingface - Connects LangChain to a Hugging Face text generation pipeline.
+#chathuggingface - Wraps that pipeline so it behaves like a chat model (like ChatGPT-style interaction)
+
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from dotenv import load_dotenv
 

@@ -22,6 +22,8 @@ query_embedding = embedding.embed_query(query)
 
 similarities = cosine_similarity([query_embedding],doc_embeddings)
 print(similarities)
+
+
 best_match_index = np.argmax(similarities)
 print("Most relevant document:")
 print(document[best_match_index])
